@@ -1,0 +1,155 @@
+.settlement-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.settlement-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.settlement-main {
+  padding: 40px 0;
+}
+
+.settlement-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.settlement-info h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.settlement-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.settlement-details {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.detail-item strong {
+  color: #333;
+  margin-right: 10px;
+}
+
+.settlement-features {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.settlement-features h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.settlement-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.settlement-features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: #666;
+}
+
+.settlement-features li:last-child {
+  border-bottom: none;
+}
+
+.navigation-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.settlement-images {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.settlement-images h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.image-placeholder {
+  background: #f8f9fa;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #666;
+}
+
+.image-placeholder p {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.image-placeholder small {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .settlement-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .settlement-info h1 {
+    font-size: 2rem;
+  }
+
+  .settlement-description {
+    font-size: 1.1rem;
+  }
+
+  .settlement-details,
+  .settlement-features,
+  .settlement-images {
+    padding: 20px;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation-buttons {
+    gap: 10px;
+  }
+}
