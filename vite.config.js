@@ -3,9 +3,13 @@ const react = require("@vitejs/plugin-react");
 
 module.exports = defineConfig({
   plugins: [react()],
-  base: "/map-brif/", // Репозиторий: IlyaSkach/map-brif
+  base: "/", // Для Netlify используем корневой путь
   server: {
     port: 3002,
     open: true,
+  },
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
   },
 });
