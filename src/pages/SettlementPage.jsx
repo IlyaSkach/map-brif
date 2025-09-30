@@ -89,9 +89,20 @@ const SettlementPage = () => {
               <h3>Фотографии поселка</h3>
               <div className="image-gallery">
                 {settlement.images.map((image, index) => (
-                  <div key={index} className="image-placeholder">
-                    <p>Фото {index + 1}</p>
-                    <small>{image}</small>
+                  <div key={index} className="image-item">
+                    <img 
+                      src={image} 
+                      alt={`Фото поселка ${index + 1}`}
+                      className="settlement-image"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'block';
+                      }}
+                    />
+                    <div className="image-placeholder" style={{display: 'none'}}>
+                      <p>Фото {index + 1}</p>
+                      <small>{image}</small>
+                    </div>
                   </div>
                 ))}
               </div>
