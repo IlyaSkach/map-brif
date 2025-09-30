@@ -85,6 +85,30 @@ const SettlementPage = () => {
               </div>
             </div>
 
+            <div className="settlement-scheme">
+              <h3>Схема участков</h3>
+              <div className="scheme-container">
+                <img 
+                  src="/images/settlements/ilinskoe/scheme.jpg" 
+                  alt="Схема участков" 
+                  className="scheme-image"
+                />
+                <div className="scheme-download">
+                  <button 
+                    className="btn btn-primary"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/images/settlements/ilinskoe/scheme.jpg';
+                      link.download = 'scheme.jpg';
+                      link.click();
+                    }}
+                  >
+                    📥 Скачать схему
+                  </button>
+                </div>
+              </div>
+            </div>
+
             <div className="settlement-images">
               <h3>Фотографии поселка</h3>
               <div className="image-gallery">

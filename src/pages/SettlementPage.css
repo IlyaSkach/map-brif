@@ -176,3 +176,68 @@
     gap: 10px;
   }
 }
+
+.settlement-scheme {
+  margin-bottom: 40px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.settlement-scheme h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.scheme-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.scheme-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  display: block;
+  margin: 0 auto;
+}
+
+.scheme-download {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.scheme-download .btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+}
+
+.scheme-download .btn:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,123,255,0.4);
+}
+
+@media (max-width: 768px) {
+  .settlement-scheme {
+    padding: 20px 15px;
+  }
+
+  .settlement-scheme h3 {
+    font-size: 1.2rem;
+  }
+}
