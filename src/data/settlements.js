@@ -10,7 +10,8 @@ export const settlements = [
     images: [
       "/images/settlements/ilinskoe/photo1.jpg",
       "/images/settlements/ilinskoe/photo2.jpg",
-      "/images/settlements/ilinskoe/photo3.jpg"
+      "/images/settlements/ilinskoe/photo3.jpg",
+      "/images/settlements/ilinskoe/photo4.jpg",
     ],
     address: "Тверская область, Калининский район, с. Ильинское",
     shortInfo:
@@ -28,7 +29,7 @@ export const settlements = [
     images: [
       "/images/settlements/yamenskoe-1/photo1.jpg",
       "/images/settlements/yamenskoe-1/photo2.jpg",
-      "/images/settlements/yamenskoe-1/photo3.jpg"
+      "/images/settlements/yamenskoe-1/photo3.jpg",
     ],
     address: "Тверская область, Калининский район, дер. Яменское",
     shortInfo:
@@ -46,7 +47,7 @@ export const settlements = [
     images: [
       "/images/settlements/yamenskoe-2/photo1.jpg",
       "/images/settlements/yamenskoe-2/photo2.jpg",
-      "/images/settlements/yamenskoe-2/photo3.jpg"
+      "/images/settlements/yamenskoe-2/photo3.jpg",
     ],
     address: "Тверская область, Калининский район, дер. Яменское",
     shortInfo:
