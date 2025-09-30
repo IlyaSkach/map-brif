@@ -7,7 +7,11 @@ export const settlements = [
     price: "от 150 000 руб/сотка",
     area: "от 6 до 15 соток",
     features: ["Электричество", "Газ", "Вода", "Дороги"],
-    images: ["/images/settlement1-1.jpg", "/images/settlement1-2.jpg"],
+    images: [
+      "/images/settlements/ilinskoe/photo1.jpg",
+      "/images/settlements/ilinskoe/photo2.jpg",
+      "/images/settlements/ilinskoe/photo3.jpg"
+    ],
     address: "Тверская область, Калининский район, с. Ильинское",
     shortInfo:
       "Сосновый бор • от 150 000 ₽/сотка • 6-15 соток • 25 км до Твери",
@@ -21,7 +25,11 @@ export const settlements = [
     price: "от 180 000 руб/сотка",
     area: "от 8 до 20 соток",
     features: ["Электричество", "Газ", "Вода", "Дороги", "Охрана"],
-    images: ["/images/settlement2-1.jpg", "/images/settlement2-2.jpg"],
+    images: [
+      "/images/settlements/yamenskoe-1/photo1.jpg",
+      "/images/settlements/yamenskoe-1/photo2.jpg",
+      "/images/settlements/yamenskoe-1/photo3.jpg"
+    ],
     address: "Тверская область, Калининский район, дер. Яменское",
     shortInfo:
       "Березовая роща • от 180 000 ₽/сотка • 8-20 соток • 28 км до Твери",
@@ -35,7 +43,11 @@ export const settlements = [
     price: "от 120 000 руб/сотка",
     area: "от 10 до 25 соток",
     features: ["Электричество", "Вода", "Дороги", "Детская площадка"],
-    images: ["/images/settlement3-1.jpg", "/images/settlement3-2.jpg"],
+    images: [
+      "/images/settlements/yamenskoe-2/photo1.jpg",
+      "/images/settlements/yamenskoe-2/photo2.jpg",
+      "/images/settlements/yamenskoe-2/photo3.jpg"
+    ],
     address: "Тверская область, Калининский район, дер. Яменское",
     shortInfo:
       "Лесная сказка • от 120 000 ₽/сотка • 10-25 соток • 30 км до Твери",
