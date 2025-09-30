@@ -88,22 +88,54 @@ const SettlementPage = () => {
             <div className="settlement-scheme">
               <h3>Схема участков</h3>
               <div className="scheme-container">
-                <img 
-                  src="/images/settlements/ilinskoe/scheme.jpg" 
-                  alt="Схема участков" 
+                <img
+                  src="/images/settlements/ilinskoe/scheme.jpg"
+                  alt="Схема участков"
                   className="scheme-image"
+                  onClick={() => {
+                    const modal = document.createElement("div");
+                    modal.className = "scheme-modal";
+                    modal.innerHTML = `
+                      <div class="scheme-modal-content">
+                        <span class="scheme-modal-close">&times;</span>
+                        <img src="/images/settlements/ilinskoe/scheme.jpg" alt="Схема участков" class="scheme-modal-image">
+                      </div>
+                    `;
+                    document.body.appendChild(modal);
+
+                    const closeModal = () => {
+                      document.body.removeChild(modal);
+                    };
+
+                    modal.querySelector(".scheme-modal-close").onclick =
+                      closeModal;
+                    modal.onclick = (e) => {
+                      if (e.target === modal) closeModal();
+                    };
+                  }}
                 />
                 <div className="scheme-download">
-                  <button 
+                  <button
                     className="btn btn-primary"
                     onClick={() => {
-                      const link = document.createElement('a');
-                      link.href = '/images/settlements/ilinskoe/scheme.jpg';
-                      link.download = 'scheme.jpg';
+                      const link = document.createElement("a");
+                      link.href = "/images/settlements/ilinskoe/scheme.jpg";
+                      link.download = "Ilyinskoe_scheme.jpg";
                       link.click();
                     }}
                   >
                     📥 Скачать схему
+                  </button>
+                  <button
+                    className="btn btn-secondary"
+                    onClick={() => {
+                      const link = document.createElement("a");
+                      link.href = "/images/settlements/ilinskoe/how_find.jpeg";
+                      link.download = "Ilyinskoe_how_find.jpeg";
+                      link.click();
+                    }}
+                  >
+                    🗺️ Как найти
                   </button>
                 </div>
               </div>
