@@ -26,6 +26,74 @@
 .main-content {
   flex: 1;
   position: relative;
+  padding: 20px 0 30px;
+}
+
+/* Контейнер под карту и кнопки */
+.map-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.settlement-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.settlement-shortcut {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.settlement-shortcut:hover {
+  transform: translateY(-2px);
+}
+
+.settlement-shortcut img {
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.settlement-shortcut span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+}
+
+.map-wrapper {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 70vh;
+}
+
+@media (max-width: 768px) {
+  .settlement-shortcuts {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .settlement-shortcut img {
+    height: 36px;
+  }
+
+  .map-wrapper {
+    height: 60vh;
+  }
 }
 
 @media (max-width: 768px) {

@@ -4,9 +4,37 @@
 }
 
 .settlement-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 20px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #e5e5e5;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.back-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn__icon {
+  font-size: 16px;
+}
+
+.back-btn__label {
+  font-size: 14px;
 }
 
 .settlement-main {
@@ -32,6 +60,12 @@
   color: #666;
   margin-bottom: 30px;
   line-height: 1.6;
+}
+
+/* Логотип перед названием поселка */
+.settlement-logo {
+  height: 90px;
+  width: auto;
 }
 
 .settlement-details {
@@ -152,6 +186,10 @@
   .settlement-content {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .settlement-logo {
+    height: 56px;
   }
 
   .settlement-info h1 {

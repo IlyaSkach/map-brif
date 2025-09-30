@@ -33,12 +33,26 @@ const SettlementPage = () => {
     window.location.href = url;
   };
 
+  // Вычисляем текущую папку изображений по первому фото и формируем пути к карте/схеме
+  const firstImage = (settlement.images && settlement.images[0]) || "";
+  const imagesFolder = firstImage
+    ? firstImage.substring(0, firstImage.lastIndexOf("/"))
+    : "/images/settlements/ilinskie_dachi";
+  const mapImagePath = `${imagesFolder}/map.jpeg`;
+  // Общая инструкция "как найти участок" (единая для всех страниц)
+  const howFindGlobal = "/images/settlements/ilinskoe/how_find.jpeg";
+
   return (
     <div className="settlement-page">
       <header className="settlement-header">
         <div className="container">
-          <button onClick={() => navigate("/")} className="btn btn-secondary">
-            ← Назад к карте
+          <button
+            onClick={() => navigate("/")}
+            className="back-btn"
+            aria-label="Назад к карте"
+          >
+            <span className="back-btn__icon">←</span>
+            <span className="back-btn__label">Назад к карте</span>
           </button>
         </div>
       </header>
@@ -47,7 +61,28 @@ const SettlementPage = () => {
         <div className="container">
           <div className="settlement-content">
             <div className="settlement-info">
-              <h1>{settlement.name}</h1>
+              {(() => {
+                const firstImage =
+                  (settlement.images && settlement.images[0]) || "";
+                const folder = firstImage
+                  ? firstImage.substring(0, firstImage.lastIndexOf("/"))
+                  : "/images/settlements";
+                const logoPath = `${folder}/logo.jpeg`;
+                return (
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: 12 }}
+                  >
+                    <img
+                      src={logoPath}
+                      alt="logo"
+                      className="settlement-logo"
+                    />
+                    <h1 style={{ margin: 0, lineHeight: 1.2 }}>
+                      {settlement.name}
+                    </h1>
+                  </div>
+                );
+              })()}
               <p className="settlement-description">{settlement.description}</p>
 
               <div className="settlement-details">
@@ -82,6 +117,14 @@ const SettlementPage = () => {
                 <button onClick={openNavigator} className="btn btn-secondary">
                   Открыть в Яндекс.Навигаторе
                 </button>
+                <button
+                  className="btn btn-secondary"
+                  onClick={() => {
+                    window.open(howFindGlobal, "_blank");
+                  }}
+                >
+                  Инструкция: как найти участок
+                </button>
               </div>
             </div>
 
@@ -89,7 +132,7 @@ const SettlementPage = () => {
               <h3>Схема участков</h3>
               <div className="scheme-container">
                 <img
-                  src="/images/settlements/ilinskoe/scheme.jpg"
+                  src={mapImagePath}
                   alt="Схема участков"
                   className="scheme-image"
                   onClick={() => {
@@ -98,7 +141,7 @@ const SettlementPage = () => {
                     modal.innerHTML = `
                       <div class="scheme-modal-content">
                         <span class="scheme-modal-close">&times;</span>
-                        <img src="/images/settlements/ilinskoe/scheme.jpg" alt="Схема участков" class="scheme-modal-image">
+                        <img src="${mapImagePath}" alt="Схема участков" class="scheme-modal-image">
                       </div>
                     `;
                     document.body.appendChild(modal);
@@ -119,23 +162,12 @@ const SettlementPage = () => {
                     className="btn btn-primary"
                     onClick={() => {
                       const link = document.createElement("a");
-                      link.href = "/images/settlements/ilinskoe/scheme.jpg";
-                      link.download = "Ilyinskoe_scheme.jpg";
+                      link.href = mapImagePath;
+                      link.download = "map.jpeg";
                       link.click();
                     }}
                   >
                     📥 Скачать схему
-                  </button>
-                  <button
-                    className="btn btn-secondary"
-                    onClick={() => {
-                      const link = document.createElement("a");
-                      link.href = "/images/settlements/ilinskoe/how_find.jpeg";
-                      link.download = "Ilyinskoe_how_find.jpeg";
-                      link.click();
-                    }}
-                  >
-                    🗺️ Как найти
                   </button>
                 </div>
               </div>
