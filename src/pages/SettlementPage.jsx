@@ -157,6 +157,96 @@ const SettlementPage = () => {
                   Инструкция: как найти участок на местности по кад. номеру
                 </button>
               </div>
+
+              <div className="app-links-section">
+                <h4>Приложение "Кадастр РУ" для поиска участков:</h4>
+                <div className="app-links">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.dataeast.kadastr&hl=ru"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="app-link app-link--google"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 2.5C5.5 3 5 4 5 5.5V42.5C5 44 5.5 45 6 45.5L6.3 45.8L27.4 24.7V24.3V23.9L6.3 2.8L6 2.5Z"
+                        fill="#32BBFF"
+                      />
+                      <path
+                        d="M34.4 31.7L27.4 24.7V24.3V23.9L34.5 16.9L34.8 17.1L43.1 21.8C45.4 23.1 45.4 25.5 43.1 26.8L34.8 31.5L34.4 31.7Z"
+                        fill="#FFEA00"
+                      />
+                      <path
+                        d="M34.8 31.5L27.4 24.3L6 45.5C6.8 46.3 8.1 46.4 9.6 45.5L34.8 31.5Z"
+                        fill="#FF3939"
+                      />
+                      <path
+                        d="M34.8 17.1L9.6 3.1C8.1 2.2 6.8 2.3 6 3.1L27.4 24.3L34.8 17.1Z"
+                        fill="#00D663"
+                      />
+                    </svg>
+                    <span>Google Play</span>
+                  </a>
+                  <a
+                    href="https://apps.apple.com/ru/app/kadastr-ru/id518231350"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="app-link app-link--apple"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08l.1-.1zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span>App Store</span>
+                  </a>
+                  <a
+                    href="https://www.rustore.ru/catalog/app/com.dataeast.kadastr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="app-link app-link--rustore"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="4"
+                        y="4"
+                        width="40"
+                        height="40"
+                        rx="8"
+                        fill="white"
+                      />
+                      <path
+                        d="M24 8L12 14V22C12 30.4 17.6 38.2 24 40C30.4 38.2 36 30.4 36 22V14L24 8Z"
+                        fill="#0066FF"
+                      />
+                      <path
+                        d="M24 12L16 16.5V22C16 28.1 20.1 33.8 24 35.5C27.9 33.8 32 28.1 32 22V16.5L24 12Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M24 16C22.3 16 21 17.3 21 19C21 20.7 22.3 22 24 22C25.7 22 27 20.7 27 19C27 17.3 25.7 16 24 16Z"
+                        fill="#0066FF"
+                      />
+                      <path d="M20 24H28V26H20V24Z" fill="#0066FF" />
+                      <path d="M20 28H28V30H20V28Z" fill="#0066FF" />
+                    </svg>
+                    <span>RuStore</span>
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div className="settlement-scheme">
@@ -210,7 +300,7 @@ const SettlementPage = () => {
                   </p>
                   <div className="contact-btns">
                     <a
-                      href="https://t.me/your_channel"
+                      href="https://t.me/realesKate"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="contact-btn contact-btn--tg"
@@ -229,7 +319,7 @@ const SettlementPage = () => {
                       <span>Telegram</span>
                     </a>
                     <a
-                      href="https://wa.me/79000000000"
+                      href="https://wa.me/79600728557"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="contact-btn contact-btn--wa"
@@ -248,7 +338,7 @@ const SettlementPage = () => {
                       <span>WhatsApp</span>
                     </a>
                     <a
-                      href="tel:+79000000000"
+                      href="tel:+79600728557"
                       className="contact-btn contact-btn--ph"
                     >
                       <svg
