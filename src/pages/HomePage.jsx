@@ -12,7 +12,7 @@ const HomePage = () => {
     <div className="home-page">
       <header className="header">
         <div className="container">
-          <h1>Коттеджные поселки Тверской области</h1>
+          <h1>Участки ИЖС в Тверской области</h1>
           <p>Выберите поселок на карте для получения подробной информации</p>
         </div>
       </header>

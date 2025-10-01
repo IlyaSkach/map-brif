@@ -1,12 +1,24 @@
 .settlement-page {
   min-height: 100vh;
-  background-color: #f8f9fa;
+  /* Тематическая зелёная подложка, как на главной */
+  background: radial-gradient(
+      circle at 20% -10%,
+      rgba(15, 157, 88, 0.08) 0 35%,
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 80% -10%,
+      rgba(46, 204, 113, 0.08) 0 35%,
+      transparent 36%
+    ),
+    linear-gradient(180deg, #f5fff5 0%, #f0fbf0 100%);
 }
 
 .settlement-header {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  border-bottom: 1px solid #eee;
-  padding: 12px 0;
+  /* Зелёный градиент под «газон» */
+  background: linear-gradient(135deg, #1faa59 0%, #0f9b0f 55%, #0b7f0b 100%);
+  color: #ffffff;
+  padding: 16px 0;
 }
 
 .back-btn {
@@ -302,6 +314,115 @@
   box-shadow: 0 6px 16px rgba(108, 117, 125, 0.4);
 }
 
+/* Карточка контактов */
+.contact-card {
+  margin-top: 20px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-card p {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.contact-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.contact-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.contact-btn--tg {
+  background: #229ed9;
+  color: #fff;
+}
+.contact-btn--wa {
+  background: #25d366;
+  color: #fff;
+}
+.contact-btn--ph {
+  background: #1f8b4c;
+  color: #fff;
+}
+
+/* Стили для зелёных кнопок навигации */
+.btn-green {
+  background: linear-gradient(135deg, #1faa59 0%, #0f9b0f 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(15, 155, 15, 0.3);
+}
+
+.btn-green:hover {
+  background: linear-gradient(135deg, #0f9b0f, #0b7f0b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 155, 15, 0.4);
+}
+
+.btn-green-secondary {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-green-secondary:hover {
+  background: linear-gradient(135deg, #388e3c, #2e7d32);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+}
+
+@media (max-width: 640px) {
+  .contact-btns {
+    flex-direction: column;
+  }
+  .contact-btn {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .settlement-scheme {
     padding: 20px 15px;
@@ -374,6 +495,153 @@
   max-height: 100%;
   border-radius: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.instruction-download-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #1faa59 0%, #0f9b0f 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(15, 155, 15, 0.4);
+  transition: all 0.3s ease;
+}
+
+.instruction-download-btn:hover {
+  background: linear-gradient(135deg, #0f9b0f, #0b7f0b);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 155, 15, 0.5);
+}
+
+/* Модалка галереи фотографий */
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.gallery-modal-content {
+  position: relative;
+  max-width: 95%;
+  max-height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal-image {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.gallery-modal-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease;
+  z-index: 10001;
+  line-height: 0;
+  font-weight: 300;
+  backdrop-filter: blur(4px);
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav-prev {
+  left: 30px;
+}
+
+.gallery-nav-next {
+  right: 30px;
+}
+
+.gallery-counter {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+@media (max-width: 640px) {
+  .gallery-nav {
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+  }
+
+  .gallery-nav-prev {
+    left: 10px;
+  }
+
+  .gallery-nav-next {
+    right: 10px;
+  }
+
+  .gallery-counter {
+    bottom: -35px;
+    font-size: 14px;
+  }
 }
 
 @keyframes fadeIn {

@@ -2,10 +2,23 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  /* Лёгкая тематическая подложка в зелёных тонах */
+  background: radial-gradient(
+      circle at 20% -10%,
+      rgba(15, 157, 88, 0.08) 0 35%,
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 80% -10%,
+      rgba(46, 204, 113, 0.08) 0 35%,
+      transparent 36%
+    ),
+    linear-gradient(180deg, #f5fff5 0%, #f0fbf0 100%);
 }
 
 .header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* Градиент как «газон» */
+  background: linear-gradient(135deg, #1faa59 0%, #0f9b0f 55%, #0b7f0b 100%);
   color: white;
   padding: 20px 0;
   text-align: center;
