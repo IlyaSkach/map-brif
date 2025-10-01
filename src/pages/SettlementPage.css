@@ -66,6 +66,7 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: 700;
+  white-space: pre-line;
 }
 
 .settlement-description {
