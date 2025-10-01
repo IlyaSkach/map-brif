@@ -61,6 +61,7 @@
 }
 
 .settlement-info h1 {
+  font-family: "Playfair Display", Georgia, serif;
   color: #333;
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -68,6 +69,7 @@
 }
 
 .settlement-description {
+  font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 30px;
@@ -107,6 +109,7 @@
 }
 
 .settlement-features h3 {
+  font-family: "Playfair Display", Georgia, serif;
   color: #333;
   margin-bottom: 15px;
   font-size: 1.3rem;
@@ -141,6 +144,7 @@
 }
 
 .settlement-images h3 {
+  font-family: "Playfair Display", Georgia, serif;
   color: #333;
   margin-bottom: 20px;
   font-size: 1.3rem;
@@ -236,6 +240,7 @@
 }
 
 .settlement-scheme h3 {
+  font-family: "Playfair Display", Georgia, serif;
   color: #333;
   margin-bottom: 20px;
   font-size: 1.4rem;
@@ -325,6 +330,7 @@
 }
 
 .contact-card h4 {
+  font-family: "Playfair Display", Georgia, serif;
   margin: 0 0 8px;
   font-size: 18px;
   color: #333;
